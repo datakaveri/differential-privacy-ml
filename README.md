@@ -2,6 +2,7 @@
 Implementation of Differentially Private Machine Learning
 
 ## Files in this repository
+```
 Root
 │   .gitignore
 │   custom_logging.py
@@ -25,11 +26,13 @@ Root
 └───existing-code
         .gitkeep
         mnist-dp (1).ipynb
+```
 
 ## How to run
 
 To run the pytorch baseline:
-    1. git clone this repository
+
+    1. git clone this repository 
     2. pip install -r requirements.txt
     3. cd baseline_pytorch
     4. python mnist.py
