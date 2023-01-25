@@ -41,7 +41,7 @@ matplotlib==3.5.3
 matplotlib-inline @ file:///C:/ci/matplotlib-inline_1661934089728/work
 nbformat==5.7.3
 nest-asyncio @ file:///C:/b/abs_3a_4jsjlqu/croot/nest-asyncio_1672387322800/work
-numpy==1.21.6
+numpy==1.22.0
 oauthlib==3.2.2
 opt-einsum==3.3.0
 packaging @ file:///C:/b/abs_cfsup8ur87/croot/packaging_1671697442297/work
