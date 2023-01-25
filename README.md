@@ -55,10 +55,47 @@ To run the tensorflow baseline:
     5. Run the script using: `python mnist.py`
 
 
-To run the pytorch-opcaus dp baseline:
+To run the pytorch-opacus dp baseline:
 
     1. Clone this repository 
     2. Create a virtual env or activate an existing env
     3. Install dependencies using: `pip install -r requirements.txt`
     4. Go to the baseline directory using: `cd dp_sgd_opacus`
     5. Run the script using: `python mnist.py`
+
+## Results
+
+### Pytorch Baselines
+
+#### Non-DP results:
+Train Accuracy: 99.99%
+Test Accuracy: 99.99%
+
+#### DP-SGD results:
+
+| Epsilon | Train Loss | Test Loss | Test Accuracy |
+| 0.1     | 0.0000     | 0.0000    | 0.0000        |
+| 1.0     | 0.0000     | 0.0000    | 0.0000        |
+| 2.0     | 0.0000     | 0.0000    | 0.0000        |
+| 4.99    | 0.6454     | 0.5952    | 90.99         |
+| 10.0    | 0.0000     | 0.0000    | 0.0000        |
+| 15.0    | 0.0000     | 0.0000    | 0.0000        |
+| 50.0    | 0.0000     | 0.0000    | 0.0000        |
+
+### Tensorflow Baselines
+
+#### Non-DP results:
+Train Accuracy: 99.99%
+Test Accuracy: 99.99%
+
+#### DP-SGD results:
+
+| Epsilon | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
+| 0.1 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 1.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 2.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 5.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 10.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 15.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+| 50.0 | 0.0000 | 0.9999 | 0.0000 | 0.9999 |
+
