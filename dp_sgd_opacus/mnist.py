@@ -19,7 +19,7 @@ batch_size = 32
 lr = 0.05
 momentum = 0.9
 max_grad_norm = 0.1
-epsilon = 5
+epsilon = 1
 delta = 1e-5
 
 
