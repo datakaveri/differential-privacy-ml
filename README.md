@@ -55,7 +55,7 @@ To run the tensorflow baseline:
     5. Run the script using: `python mnist.py`
 
 
-To run the pytorch-opcaus dp baseline:
+To run the pytorch-opacus dp baseline:
 
     1. Clone this repository 
     2. Create a virtual env or activate an existing env
