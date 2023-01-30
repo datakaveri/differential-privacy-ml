@@ -68,37 +68,30 @@ To run the pytorch-opacus dp baseline:
 ### Pytorch Baselines
 
 #### Non-DP results:
-Train Accuracy: 99.99%
-Test Accuracy: 99.99%
+Train Accuracy: --%
+Test Accuracy: 97.45%
 
 #### DP-SGD results:
 
-MAX_GRAD_NORM = 4  
-DELTA = 1e-5  
-MOMENTUM = 0.9  
-BACTH_SIZE = 600  
-EPOCHS = 100      
-LEARNING_RATE = 0.05  
+C = 4  
+delta = 1e-5  
+momentum = 0.9  
+batch_size = 600  
+learning_rate = 0.05  
 
 
-| Epsilon | Sigma    |Train Loss | Train Accuracy | Test Loss | Test Accuracy |
-|---------|----------|-----------|----------------|-----------|---------------|
-|    1    |          |           |                |           |               |
-|    2    | 2.13867  |  0.7625   |     87.85      |  0.7388   |    88.59      |
-|    5    | 1.12548  |  0.4183   |     90.85      |  0.3925   |    91.50      |
-|    10   | 0.80230  |  0.3590   |     91.27      |  0.3448   |    92.12      |
-|    20   | 0.62690  |  0.3327   |     91.70      |  0.3241   |    92.54      |
-|         |          |           |                |           |               |
+| Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
+|---------|----------|--------|------------|----------------|-----------|---------------|
+|    1    | 3.86718  |   100  |   2.7874   |     83.46      |  2.6155   |    83.28      |
+|    2    | 2.13867  |   100  |   0.7625   |     87.85      |  0.7388   |    88.59      |
+|    5    | 1.12548  |   100  |   0.4183   |     90.85      |  0.3925   |    91.50      |
+|    10   | 0.80230  |   100  |   0.3590   |     91.27      |  0.3448   |    92.12      |
+|    20   | 0.62690  |   100  |   0.3327   |     91.70      |  0.3241   |    92.54      |
+|    30   | 0.62995  |   200  |   0.2906   |     93.22      |  0.3021   |    93.32      |
 
-
-| Epsilon | Train Loss | Test Loss | Test Accuracy |
-| 0.1     | 0.0000     | 0.0000    | 0.0000        |
-| 1.0     | 0.0000     | 0.0000    | 0.0000        |
-| 2.0     | 1.2646     | 1.1823    | 87.86         |
-| 4.99    | 0.6454     | 0.5952    | 90.99         |
-| 10.0    | 0.0000     | 0.0000    | 0.0000        |
-| 15.0    | 0.0000     | 0.0000    | 0.0000        |
-| 50.0    | 0.0000     | 0.0000    | 0.0000        |
+<p align="center">
+<img src="./plotting/plots/epsilon_vs_acc_loss_for_with_epsilon_momentum_0-9.png" width="700">
+</p>
 
 
 
