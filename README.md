@@ -73,24 +73,21 @@ Test Accuracy: 99.99%
 
 #### DP-SGD results:
 
-MAX_GRAD_NORM = 4
-
-DELTA = 1e-5
-
-MOMENTUM = 0.9
-
-BACTH_SIZE = 600
-
-EPOCHS = 100
-
-LEARNING_RATE = 0.05
+MAX_GRAD_NORM = 4  
+DELTA = 1e-5  
+MOMENTUM = 0.9  
+BACTH_SIZE = 600  
+EPOCHS = 100      
+LEARNING_RATE = 0.05  
 
 
 | Epsilon | Sigma    |Train Loss | Train Accuracy | Test Loss | Test Accuracy |
 |---------|----------|-----------|----------------|-----------|---------------|
+|    1    |          |           |                |           |               |
 |    2    | 2.13867  |  0.7625   |     87.85      |  0.7388   |    88.59      |
+|    5    | 1.12548  |  0.4183   |     90.85      |  0.3925   |    91.50      |
 |    10   | 0.80230  |  0.3590   |     91.27      |  0.3448   |    92.12      |
-|    20   |          |  0.3327   |     91.70      |  0.3241   |    92.54      |
+|    20   | 0.62690  |  0.3327   |     91.70      |  0.3241   |    92.54      |
 |         |          |           |                |           |               |
 
 
