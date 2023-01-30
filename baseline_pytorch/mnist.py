@@ -8,7 +8,7 @@ import numpy as np
 from mnist_datasets import MNISTDatasetTrain, MNISTDatasetTest
 
 epochs = 100
-batch_size = 32
+batch_size = 600
 lr = 0.05
 momentum = 0.9
 
@@ -38,7 +38,7 @@ def train(epoch):
     model.train()
     epoch_loss = 0
     samples = 0
-    batches = int(len(train_loader.dataset) / (batch_size*30))
+    batches = int(len(train_loader.dataset) / (batch_size*5))
     count = 0
     print('Training Epoch: {} ['.format(epoch) + '-'*batches+']', end='\r')
     for data, target in train_loader:
@@ -49,7 +49,7 @@ def train(epoch):
         optimizer.step()
         epoch_loss += loss.item()
         samples += len(data)
-        i = int(samples/(batch_size*30))
+        i = int(samples/(batch_size*5))
         count += 1
         print('Training Epoch: {} ['.format(epoch) +'='*(i)+ '-'*(batches-i)+'] ({}/{})'.format(samples, len(train_loader.dataset)), end='\r')
     print('Training Epoch: {} ['.format(epoch) + '='*batches+'] ({}/{})'.format(samples, len(train_loader.dataset)))
