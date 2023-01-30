@@ -68,17 +68,18 @@ To run the pytorch-opacus dp baseline:
 ### Pytorch Baselines
 
 #### Non-DP results:
-Train Accuracy: --%
+Train Accuracy: --%  
 Test Accuracy: 97.45%
 
 #### DP-SGD results:
-
 C = 4  
-delta = 1e-5  
-momentum = 0.9  
+delta = 1e-5 
 batch_size = 600  
 learning_rate = 0.05  
 
+[For target_epsilon experiments]
+
+1. With momentum = 0.9  
 
 | Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
 |---------|----------|--------|------------|----------------|-----------|---------------|
@@ -89,9 +90,22 @@ learning_rate = 0.05
 |    20   | 0.62690  |   100  |   0.3327   |     91.70      |  0.3241   |    92.54      |
 |    30   | 0.62995  |   200  |   0.2906   |     93.22      |  0.3021   |    93.32      |
 
-<p align="center">
-<img src="./plotting/plots/epsilon_vs_acc_loss_for_with_epsilon_momentum_0-9.png" width="700">
-</p>
 
+<img src="./plotting/plots/epsilon_vs_acc_loss_for_with_epsilon_momentum_0-9.png" width="700">
+
+<img src="./plotting/plots/epsilon_vs_sigma_with_epsilon_momentum_0-9.png" width="700">
+
+<br>
+
+2. With momentum = 0 
+
+| Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
+|---------|----------|--------|------------|----------------|-----------|---------------|
+|    1    | 3.86718  |   100  |      |           |     |          |
+|    2    | 2.13867  |   100  |      |           |     |          |
+|    5    | 1.12548  |   100  |      |           |     |          |
+|    10   | 0.80230  |   100  |      |           |     |          |
+|    20   | 0.62690  |   100  |      |           |     |          |
+|    30   | 0.62995  |   200  |      |           |     |          |
 
 
