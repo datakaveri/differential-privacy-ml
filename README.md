@@ -67,17 +67,21 @@ To run the pytorch-opacus dp baseline:
 
 ### Pytorch Baselines
 
-#### Non-DP results:
+<h4><b> Non-DP results:</b></h4>
+
 Train Accuracy: --%  
 Test Accuracy: 97.45%
 
-#### DP-SGD results:
-C = 4  
-delta = 1e-5 
-batch_size = 600  
-learning_rate = 0.05  
+<h4><b> DP-SGD results:</b></h4>
 
-[For target_epsilon experiments]
+Hyperparameters:  
+<i>&nbsp;&nbsp;&nbsp;&nbsp;C = 4</i>  
+<i>&nbsp;&nbsp;&nbsp;&nbsp;delta = 1e-5</i>    
+<i>&nbsp;&nbsp;&nbsp;&nbsp;batch_size = 600</i>    
+<i>&nbsp;&nbsp;&nbsp;&nbsp;learning_rate = 0.05</i>    
+
+
+<b><i>[For target_epsilon experiments]</b></i>
 
 1. With momentum = 0.9  
 
@@ -101,11 +105,35 @@ learning_rate = 0.05
 
 | Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
 |---------|----------|--------|------------|----------------|-----------|---------------|
-|    1    | 3.86718  |   100  |      |           |     |          |
+|    1    | 3.86718  |   100  |   0.3789   |     88.95      |   0.3500  |    89.70      |
 |    2    | 2.13867  |   100  |      |           |     |          |
 |    5    | 1.12548  |   100  |      |           |     |          |
 |    10   | 0.80230  |   100  |      |           |     |          |
 |    20   | 0.62690  |   100  |      |           |     |          |
 |    30   | 0.62995  |   200  |      |           |     |          |
 
+<br>
 
+<b><i>[For target_epsilon experiments]</b></i>
+
+1. With momentum = 0.9
+
+| Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
+|---------|----------|--------|------------|----------------|-----------|---------------|
+|        | 3.86718  |   100  |      |           |     |          |
+|        | 2.13867  |   100  |      |           |     |          |
+|        | 1.12548  |   100  |      |           |     |          |
+|   9.99  | 0.80230  |   100  |   0.3595   |      92.46     |  0.3460   |     92.39     |
+|       | 0.62690  |   100  |      |           |     |          |
+|       | 0.62995  |   200  |      |           |     |          |
+
+2. With momentum = 0
+
+| Epsilon | Sigma    | Epochs | Train Loss | Train Accuracy | Test Loss | Test Accuracy |
+|---------|----------|--------|------------|----------------|-----------|---------------|
+|        | 3.86718  |   100  |      |           |     |          |
+|        | 2.13867  |   100  |      |           |     |          |
+|        | 1.12548  |   100  |      |           |     |          |
+|       | 0.80230  |   100  |      |           |     |          |
+|       | 0.62690  |   100  |      |           |     |          |
+|       | 0.62995  |   200  |      |           |     |          |
